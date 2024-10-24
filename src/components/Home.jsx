@@ -81,8 +81,8 @@ const Home = () => {
                 </section>
                 {/* Additional Skills */}
                 <section className='mt-6'>
-                    <div className='container mx-auto'>
-                        <h1 className='text-3xl font-semibold pl-6 hover:text-[#00df9a]'>Additional Skills</h1>
+                    <div className='container mx-4'>
+                        <h1 className='text-3xl font-semibold hover:text-[#00df9a]'>Additional Skills</h1>
 
                         <div className='flex flex-wrap justify-between w-full mt-[1.5%] px-6 sm:px-4'>
                             {softSkills.map((skill, index) => (
