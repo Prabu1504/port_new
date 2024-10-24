@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import MyImage from '../assets/600.jpg';
 import bgImage from '../assets/backgroundImg.png';
 // import Instagram from '../assets/logo2.jpg'
@@ -13,6 +13,8 @@ import { TiSocialLinkedinCircular } from "react-icons/ti";
 import { FaWhatsapp } from "react-icons/fa6";
 import logo from "/src/assets/logo.png"
 import mySelf from "/src/assets/imges.png";
+import { Link } from 'react-router-dom';
+import Project from"./Project"
 
 const skills = [
     { name: 'HTML', level: 'Advanced', width: 'w-[96%]' },
@@ -31,9 +33,50 @@ const education = [
     { year: "2015", course: "SSLC", institute: " Government Boys High secondary School", place: "Devapandalam" },
 
 ]
+// const currentData = [
+//     {
+//         _id: '1',
+//         images: '/src/assets/logo.png',
+//         authorName: 'John Doe',
+//         updatedAt: '2024-01-15T14:32:00',
+//         heading: 'First Project',
+//     },
+//     {
+//         _id: '2',
+//         images: '/src/assets/logo.png',
+//         authorName: 'Jane Smith',
+//         updatedAt: '2024-02-20T09:15:00',
+//         heading: 'Second Project',
+//     },
+//     {
+//         _id: '3',
+//         images: '/src/assets/logo.png',
+//         authorName: 'Alex Johnson',
+//         updatedAt: '2024-03-10T12:45:00',
+//         heading: 'Third Project',
+//     },
+//     {
+//         _id: '3',
+//         images: '/src/assets/logo.png',
+//         authorName: 'Alex Johnson',
+//         updatedAt: '2024-03-10T12:45:00',
+//         heading: 'Forth Project',
+//     },
+// ];
+
+// const blog = {
+//     heading: 'Sample Project',
+//     authorName: 'John Doe',
+//     createdAt: '2024-03-10T12:45:00',
+//     images: 'https://via.placeholder.com/600x400',
+//     description: `
+//       <p>This is a sample project description.</p>
+//       <p>It explains the details of the project, the objectives, and the outcomes.</p>
+//     `
+// };
 
 const Home = () => {
-
+    
     return (
         <>
             <div className='px-6'>
@@ -53,14 +96,7 @@ const Home = () => {
                     </div>
                 </section>
                 {/* Project Details */}
-                <section>
-                    <div>
-                        {/*1.Project*/}
-                        <div>
-
-                        </div>
-                    </div>
-                </section>
+                <Project/>
                 {/* Technology section */}
                 <section>
                     <div className='container'>
