@@ -27,7 +27,7 @@ const skills = [
 ];
 const softSkills = ['Git', 'TeamWork', 'Quick Learning', 'VS Code'];
 const education = [
-    { year: "2024", course: "PGFSD", institute: "WHY Global service", place: "Chennai" },
+    { year: "2023", course: "PGFSD", institute: "WHY Global service", place: "Chennai" },
     { year: "2021", course: "BE Computer Science and Engineering", institute: "CSI Institute of Technology", place: "Thovalai" },
     { year: "2017", course: "HSC", institute: "Government Boys High secondary School", place: "Devapandalam" },
     { year: "2015", course: "SSLC", institute: " Government Boys High secondary School", place: "Devapandalam" },

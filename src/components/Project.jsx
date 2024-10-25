@@ -5,51 +5,29 @@ const Project = () => {
     const currentData = [
         {
             _id: '1',
-            images: 'https://via.placeholder.com/600x400', // Dummy image
+            images: '/src/assets/Capture.PNG', // Dummy image
             authorName: 'John Doe',
             createdAt: '2024-01-15T14:32:00',
-            heading: 'First Project',
+            heading: 'First Ladder',
             description: `
-                <p>This is a description for the first project.</p>
-                <p>It provides an overview of the project's purpose and objectives.</p>
-            `
+                <p>First-Ladder is an International Education, Immigration and Recruitment Consulting Company headquartered in Chennai, India. We are a leading global career consulting firm, providing innovative and customized solutions to students, job seekers and employers. Our process starts with developing an accurate profile of each candidate and using that as out database to match them with the available opportunities in terms of education and jobs. Our aim is to help students and professionals from all over the world to find opportunities that match their requirements, skillset, interests and aspirations, so that they can pursue their dreams while achieving higher returns on investment.</p>
+             `
         },
         {
             _id: '2',
-            images: 'https://via.placeholder.com/600x400', // Dummy image
+            images: '/src/assets/psp.PNG', // Dummy image
             authorName: 'Jane Smith',
             createdAt: '2024-02-20T09:15:00',
-            heading: 'Second Project',
+            heading: 'PSP Hospital',
             description: `
-                <p>This is a description for the second project.</p>
-                <p>It provides an overview of the project's outcomes and goals.</p>
-            `
-        }, {
-            _id: '3',
-            images: '/src/assets/logo.png',
-            authorName: 'Jane Smith',
-            createdAt: '2024-02-20T09:15:00',
-            heading: 'Second Project',
-            description: `
-                <p>This is a description for the second project.</p>
-                <p>It provides an overview of the project's outcomes and goals.</p>
-            `
-        },
-        {
-            _id: '2',
-            images: 'https://via.placeholder.com/600x400', // Dummy image
-            authorName: 'Jane Smith',
-            createdAt: '2024-02-20T09:15:00',
-            heading: 'Second Project',
-            description: `
-                <p>This is a description for the second project.</p>
-                <p>It provides an overview of the project's outcomes and goals.</p>
+                An inviting homepage with an overview of the hospital, its mission, and key services. Features can include quick navigation to services, testimonials, and a contact and appointments hotline.
             `
         }
     ];
 
     const [selectedRecord, setSelectedRecord] = useState(null);
     const [isViewModalVisible, setIsViewModalVisible] = useState(false);
+    const [isExpanded, setIsExpanded] = useState(false);
 
     const handleView = (record) => {
         setSelectedRecord(record); // Set the selected record
@@ -73,10 +51,10 @@ const Project = () => {
                         {currentData.map((project) => (
                             <div
                                 key={project._id}
-                                className="grid md:grid-cols-1 lg:grid-cols-2 card2 bg-white border-2 rounded-[18px] overflow-hidden w-full md:w-full md:px-0"
+                                className="grid md:grid-cols-1 lg:grid-cols-2 card2 bg-blue-500 border-2 rounded-[18px] overflow-hidden w-full md:w-full md:px-0"
                             >
                                 <img
-                                    className="object-cover rounded-t-lg md:w-full h-fit md:h-[330px] w-full"
+                                    className="object-cover rounded-t-lg md:w-full h-full md:h-[330px] w-full"
                                     src={project.images}
                                     alt={`Image of ${project.heading}`}
                                 />
@@ -85,20 +63,25 @@ const Project = () => {
                                         <button className="text-sm rounded-lg p-1 w-28 h-10 bg-slate-200 text-black">
                                             {project.authorName}
                                         </button>
-                                        <h3 className="text-sm p-2 text-third">
+                                        {/* <h3 className="text-sm p-2 text-third">
                                             {new Date(project.createdAt).toLocaleDateString('en-US', {
                                                 month: 'short',
                                                 day: 'numeric',
                                                 year: 'numeric',
                                             })}
-                                        </h3>
+                                        </h3> */}
                                     </div>
                                     <div className="flex flex-col items-start">
-                                        <h1 className="text-black mt-2 md:mt-3 text-xl font-bold">
+                                        <h1 className="text-white underline underline-offset-8 mt-2 md:mt-3 text-xl font-bold">
                                             {project.heading}
                                         </h1>
-                                        <button
-                                            className="bg-mygreen font-bold text-black py-2 px-4 rounded-md mb-4"
+                                        <p
+                                            className={`text-white font-semibold text-wrap ${!isExpanded ? 'line-clamp-3' : ''}`}
+                                            onClick={() => setIsExpanded(!isExpanded)}
+                                        >
+                                            {project.description}
+                                        </p>                                        <button
+                                            className="bg-white font-bold hover:bg-green-500 hover:text-white text-black py-2  px-4 rounded-md mt-20 ml-3"
                                             onClick={() => handleView(project)}
                                         >
                                             Read More
@@ -112,17 +95,17 @@ const Project = () => {
 
                 {/* View Modal */}
                 <Modal
-                    title="View Blog"
-                    visible={isViewModalVisible}
+                    title="View Project"
+                    open={isViewModalVisible}
                     onCancel={handleCancel}
                     footer={null}
-                    width={400}
+                    width={1400}
                 >
                     {selectedRecord && (
                         <div className="bg-white py-5">
-                            <div className="px-4 lg:px-10 mt-5 xl:px-20">
+                            <div className="px-4 lg:px-10 mt-2 xl:px-20">
                                 <div className="mb-8">
-                                    <h1 className="text-blue font-bold text-4xl py-3">
+                                    <h1 className="text-blue font-bold text-blue-500 text-2xl py-3">
                                         {selectedRecord.heading.charAt(0).toUpperCase() + selectedRecord.heading.slice(1)}
                                     </h1>
                                     <div className="lg:mr-[1480px] md:w-[330px] lg:ml-auto mt-1 h-1 bg-mygreen" />
@@ -135,22 +118,22 @@ const Project = () => {
                                         </p>
                                     </div>
                                 </div>
-                                <div className="flex flex-row gap-5">
+                                <div className="flex flex-row">
                                     <div className="w-[50%]">
                                         <img
-                                            className="rounded-lg md:w-full md:h-fit lg:h-full w-[90%] mt-0.5 shadow-2xl"
+                                            className="rounded-lg md:w-full md:h-fit lg:h-[60%] lg:w-[80%] mt-0.5 shadow-2xl"
                                             style={{ boxShadow: '25px 30px 10px gray' }}
                                             src={selectedRecord.images}
                                             alt={`Card`}
                                         />
                                     </div>
                                     <div className="relative md:px-10 px-8 md:text-xl text-lg text-justify pt-5 pb-8 w-[50%]">
-                                        <span className="absolute top-0 left-0 ml-8 text-blue font-bold text-3xl p-1 underline underline-offset-8 underline-red-500">
+                                        <span className="absolute text-blue-500 top-0 left-0 ml-8 text-blue font-bold text-xl p-1 underline underline-offset-8 underline-red-500">
                                             Description
                                         </span>
                                         <div
                                             dangerouslySetInnerHTML={{ __html: selectedRecord.description }}
-                                            className="text-gray-700 text-2xl mt-10"
+                                            className="text-gray-700 text-md mt-10"
                                         />
                                     </div>
                                 </div>
