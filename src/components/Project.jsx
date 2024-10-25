@@ -43,15 +43,15 @@ const Project = () => {
         <div>
             <section>
                 <div className="bg-black py-4 px-4">
-                    <h1 className="text-white text-2xl md:text-5xl font-bold pt-8 ml-4">
+                    <h1 className="text-white md:text-5xl pt-8 ml-4 text-3xl font-semibold pl-6 hover:text-[#00df9a]">
                         Projects
                     </h1>
                     <div className="lg:mr-[1090px] md:w-[330px] lg:ml-auto mt-6 h-1 bg-mygreen" />
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-6 lg:px-28">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-14 my-6 lg:px-28 ">
                         {currentData.map((project) => (
                             <div
                                 key={project._id}
-                                className="grid md:grid-cols-1 lg:grid-cols-2 card2 bg-blue-500 border-2 rounded-[18px] overflow-hidden w-full md:w-full md:px-0"
+                                className="grid md:grid-cols-1 transform hover:scale-110 transition duration-300 ease-out lg:grid-cols-2 card2 bg-blue-500 border-2 rounded-[18px] overflow-hidden w-full md:w-full md:px-0"
                             >
                                 <img
                                     className="object-cover rounded-t-lg md:w-full h-full md:h-[330px] w-full"
