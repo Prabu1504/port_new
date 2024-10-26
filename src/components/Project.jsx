@@ -5,24 +5,25 @@ const Project = () => {
     const currentData = [
         {
             _id: '1',
-            images: '/src/assets/Capture.PNG', // Dummy image
+            images: '/src/assets/Capture.PNG', 
             authorName: 'John Doe',
             createdAt: '2024-01-15T14:32:00',
             heading: 'First Ladder',
             description: `
-                <p>First-Ladder is an International Education, Immigration and Recruitment Consulting Company headquartered in Chennai, India. We are a leading global career consulting firm, providing innovative and customized solutions to students, job seekers and employers. Our process starts with developing an accurate profile of each candidate and using that as out database to match them with the available opportunities in terms of education and jobs. Our aim is to help students and professionals from all over the world to find opportunities that match their requirements, skillset, interests and aspirations, so that they can pursue their dreams while achieving higher returns on investment.</p>
+                First-Ladder is an International Education, Immigration and Recruitment Consulting Company headquartered in Chennai, India. We are a leading global career consulting firm, providing innovative and customized solutions to students, job seekers and employers. Our process starts with developing an accurate profile of each candidate and using that as out database to match them with the available opportunities in terms of education and jobs. Our aim is to help students and professionals from all over the world to find opportunities that match their requirements, skillset, interests and aspirations, so that they can pursue their dreams while achieving higher returns on investment.
              `
         },
         {
             _id: '2',
-            images: '/src/assets/psp.PNG', // Dummy image
+            images: '/src/assets/psp.PNG',
             authorName: 'Jane Smith',
             createdAt: '2024-02-20T09:15:00',
             heading: 'PSP Hospital',
             description: `
                 An inviting homepage with an overview of the hospital, its mission, and key services. Features can include quick navigation to services, testimonials, and a contact and appointments hotline.
             `
-        }
+        },
+        
     ];
 
     const [selectedRecord, setSelectedRecord] = useState(null);
@@ -43,7 +44,7 @@ const Project = () => {
         <div>
             <section>
                 <div className="bg-black py-4 px-4">
-                    <h1 className="text-white md:text-5xl pt-8 ml-4 text-3xl font-semibold pl-6 hover:text-[#00df9a]">
+                    <h1 className="text-white md:text-5xl pt-8 ml-4 font-semibold transform hover:scale-105 transition duration-300 ease-out hover:text-[#00df9a]">
                         Projects
                     </h1>
                     <div className="lg:mr-[1090px] md:w-[330px] lg:ml-auto mt-6 h-1 bg-mygreen" />
@@ -51,7 +52,7 @@ const Project = () => {
                         {currentData.map((project) => (
                             <div
                                 key={project._id}
-                                className="grid md:grid-cols-1 transform hover:scale-110 transition duration-300 ease-out lg:grid-cols-2 card2 bg-blue-500 border-2 rounded-[18px] overflow-hidden w-full md:w-full md:px-0"
+                                className="grid md:grid-cols-1 transform hover:scale-105 transition duration-300 ease-out lg:grid-cols-2 card2 bg-blue-500 border-2 rounded-[18px] overflow-hidden w-full md:w-full md:px-0"
                             >
                                 <img
                                     className="object-cover rounded-t-lg md:w-full h-full md:h-[330px] w-full"
@@ -121,7 +122,7 @@ const Project = () => {
                                 <div className="flex flex-row">
                                     <div className="w-[50%]">
                                         <img
-                                            className="rounded-lg md:w-full md:h-fit lg:h-[60%] lg:w-[80%] mt-0.5 shadow-2xl"
+                                            className="rounded-lg md:w-full md:h-fit lg:h-[420px] mt-0.5 shadow-2xl"
                                             style={{ boxShadow: '25px 30px 10px gray' }}
                                             src={selectedRecord.images}
                                             alt={`Card`}
@@ -132,9 +133,8 @@ const Project = () => {
                                             Description
                                         </span>
                                         <div
-                                            dangerouslySetInnerHTML={{ __html: selectedRecord.description }}
                                             className="text-gray-700 text-md mt-10"
-                                        />
+                                        />{ selectedRecord.description }
                                     </div>
                                 </div>
                             </div>
