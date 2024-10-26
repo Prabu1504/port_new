@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { Modal } from 'antd';
-import project2 from "/src/assets/psp.PNG";
-import project1 from"/src/assets/Capture.PNG"
+import project2 from "/src/assets/psp.png";
+import project1 from"/src/assets/Capture.png"
 
 
 const Project = () => {
     const currentData = [
         {
             _id: '1',
-            images: {project1}, 
+            images: project1, 
             authorName: 'John Doe',
             createdAt: '2024-01-15T14:32:00',
             heading: 'First Ladder',
@@ -18,7 +18,7 @@ const Project = () => {
         },
         {
             _id: '2',
-            images:{project2},
+            images:project2,
             authorName: 'Jane Smith',
             createdAt: '2024-02-20T09:15:00',
             heading: 'PSP Hospital',
