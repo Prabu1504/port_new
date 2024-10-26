@@ -44,10 +44,11 @@ const Project = () => {
         <div>
             <section>
                 <div className="bg-black py-4 px-4">
-                    <h1 className="text-white md:text-5xl pt-8 ml-4 font-semibold transform hover:scale-105 transition duration-300 ease-out hover:text-[#00df9a]">
+                <h1 className="text-white md:text-4xl pt-8 ml-4  font-semibold inline-block transform transition duration-300 ease-out hover:scale-125 hover:text-blue-600">
+ 
                         Projects
                     </h1>
-                    <div className="lg:mr-[1090px] md:w-[330px] lg:ml-auto mt-6 h-1 bg-mygreen" />
+                    <div className="lg:mr-[1090px] md:w-[330px] lg:ml-auto mt-6 h-1" />
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-14 my-6 lg:px-28 ">
                         {currentData.map((project) => (
                             <div

@@ -86,12 +86,12 @@ const Home = () => {
                         <div>
                             <h1 className='font-bold text-4xl'> Hello, I am PRABU</h1>
                             <h1 className='font-bold text-4xl mt-1 gradiant-text'> MEAN stack developer</h1>
-                            <h1 className='mt-4 text-gray-400 ml'>It is the core of both frontend and backend development using React and Node.js. Therefore, MERN stack developers must possess proficiency in ES6+ features, asynchronous programming, and functional programming concepts to effectively build websites. </h1>
+                            <h1 className='mt-4 text-gray-300 font-semibold'>It is the core of both frontend and backend development using React and Node.js. Therefore, MERN stack developers must possess proficiency in ES6+ features, asynchronous programming, and functional programming concepts to effectively build websites. </h1>
 
                         </div>
                         <div className='relative'>
-                            <img src={MyImage} width={150} height={150} alt="MyImage" className='rounded-tl-lg relative rounded-br-lg z-10' />
-                            <img src={bgImage} alt="bg" width={350} height={850} className='absolute rounded-br-lg top-2 left-2 z-2' />
+                            <img src={MyImage} width={180} height={150} alt="MyImage" className='rounded-tl-lg relative rounded-br-lg z-10 inline-block transform transition duration-300 ease-out hover:scale-150' />
+                            <img src={bgImage} alt="bg" width={370} height={850} className='absolute rounded-br-lg top-2 left-2 z-2' />
                         </div>
                     </div>
                 </section>
@@ -100,7 +100,7 @@ const Home = () => {
                 {/* Technology section */}
                 <section>
                     <div className='container'>
-                        <h1 className='text-3xl font-semibold pl-6 hover:text-[#00df9a]'>Technologies</h1>
+                        <h1 className='text-3xl font-semibold pl-6 inline-block transform transition duration-300 ease-out hover:scale-125 hover:text-blue-600'>Technologies</h1>
                         <div className='mt-6 ml-10'>
                             {skills.map((skill, index) => (
                                 <div key={index} className={`mt-4 ml-3 ${index >= 3 ? 'mt-6' : ''}`}>
@@ -116,9 +116,9 @@ const Home = () => {
                     </div>
                 </section>
                 {/* Additional Skills */}
-                <section className='mt-6'>
-                    <div className='container mx-4'>
-                        <h1 className='text-3xl font-semibold hover:text-[#00df9a]'>Additional Skills</h1>
+                <section className='mt-8'>
+                    <div className='container mx-6'>
+                        <h1 className='text-3xl inline-block transform transition duration-300 ease-out hover:scale-125 font-semibold hover:text-blue-600'>Additional Skills</h1>
 
                         <div className='flex flex-wrap justify-between w-full mt-[1.5%] px-6 sm:px-4'>
                             {softSkills.map((skill, index) => (
@@ -137,7 +137,7 @@ const Home = () => {
                 {/* About page */}
                 <section className='mt-6'>
                     <div className='container'>
-                        <h1 className='text-3xl font-semibold pl-6 hover:text-[#00df9a]'>About Me</h1>
+                        <h1 className='text-3xl font-semibold pl-8 inline-block transform transition duration-300 ease-out hover:scale-125 hover:text-blue-600'>About Me</h1>
                         <div className=' mt-8 ml-28 relative before:absolute before:top-0 before:bottom-0 before:w-2 before:bg-white'>
                             {education.map((educations, index) => (
                                 <div className='pl-6 relative mb-6'>
@@ -186,13 +186,13 @@ const Home = () => {
                                         <TfiTwitter size="30px" />
                                         <CiFacebook size="30px" />
                                         <a href="https://www.instagram.com/_silent_at_na_k_ri_ku_s_?igsh=dDNyaDF6NjlkZTh2">
-                                            <PiInstagramLogoLight size="30px" />
+                                            <PiInstagramLogoLight size="30px" className='hover:text-red-400' />
                                         </a>
                                         <a href="https://www.linkedin.com/in/prabu-p-2a6440301/">
-                                            <TiSocialLinkedinCircular size="30px" />
+                                            <TiSocialLinkedinCircular size="30px" className='hover:text-blue-600' />
                                         </a>
                                         <a href="https://wa.me/1234567890?text=Hello%20there!" target="_blank" rel="noopener noreferrer">
-                                            <FaWhatsapp size="30px" />
+                                            <FaWhatsapp size="30px" className='hover:text-green-700' />
                                         </a>
                                     </li>
                                 </ul>
