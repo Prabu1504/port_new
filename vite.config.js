@@ -1,7 +1,14 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-})
+  build: {
+    rollupOptions: {
+      external: [
+        // Add any specific modules you want to externalize here if needed
+      ],
+    },
+  },
+  assetsInclude: ['**/*.png', '**/*.PNG'], // Ensure PNG files are included
+});
