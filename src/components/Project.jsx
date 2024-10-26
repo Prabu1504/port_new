@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Modal } from 'antd';
-import project2 from "/src/assets/psp.png";
-import project1 from"/src/assets/Capture.png"
+import project2 from "../assets/psp.png";
+import project1 from"../assets/Capture.png";
 
 
 const Project = () => {
