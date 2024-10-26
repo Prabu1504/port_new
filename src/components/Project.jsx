@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
-import { Modal } from 'antd'; // Make sure Ant Design is installed
+import { Modal } from 'antd';
+import project2 from "/src/assets/psp.PNG";
+import project1 from"/src/assets/Capture.PNG"
+
 
 const Project = () => {
     const currentData = [
         {
             _id: '1',
-            images: '/src/assets/Capture.PNG', 
+            images: {project1}, 
             authorName: 'John Doe',
             createdAt: '2024-01-15T14:32:00',
             heading: 'First Ladder',
@@ -15,7 +18,7 @@ const Project = () => {
         },
         {
             _id: '2',
-            images: '/src/assets/psp.PNG',
+            images:{project2},
             authorName: 'Jane Smith',
             createdAt: '2024-02-20T09:15:00',
             heading: 'PSP Hospital',

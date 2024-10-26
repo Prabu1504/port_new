@@ -33,7 +33,6 @@ const education = [
     { year: "2015", course: "SSLC", institute: " Government Boys High secondary School", place: "Devapandalam" },
 
 ]
-// const currentData = [
 //     {
 //         _id: '1',
 //         images: '/src/assets/logo.png',
