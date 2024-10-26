@@ -92,7 +92,7 @@ const Navbar = () => {
                         </div>
                         <form onSubmit={handleSubmit}>
                             <div className=' flex flex-col gap-4'>
-                                <label >Name:  <Input type='text' id='name' value={user.name} name='name' onChange={handleInput} className='border-2 border-gray-600 rounded px-3' placeholder='Name' ></Input></label>
+                                <label >Name: <Input type='text' id='name' value={user.name} name='name' onChange={handleInput} className='border-2 rounded px-3' placeholder='Name' ></Input></label>
                                 <label>Email: <Input type='email' id='email' value={user.email} name='email' onChange={handleInput} className='border-2 border-gray-600 rounded px-3' placeholder='Email'></Input></label>
                                 <label >Mobile No: <Input type='number' id="mobile" value={user.mobile} name="mobile" onChange={handleInput} className='border-2 border-gray-600 rounded px-2' placeholder='Phone Number'></Input></label>
                                 <label >Message: <Input type='textarea' id='message' value={user.message} name="message" onChange={handleInput} className='border-2 border-gray-600 rounded px-3' placeholder='Message'></Input></label>
