@@ -67,7 +67,7 @@ const Navbar = () => {
 
                 {/* Portfolio Text */}
                 <h2 className="pacifico-regular inline-block transform transition duration-300 ease-out hover:scale-125 hover:text-blue-600 text-white sm:text-2xl md:text-3xl lg:text-4xl ml-4 sm:ml-6 md:ml-8 lg:ml-10 p-2">
-                    Portfolio
+                    Portfolioo
                 </h2>
             </div>
 
