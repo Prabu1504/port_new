@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import logo from "../assets/logo.png"
-import {Input, Modal, Spin } from 'antd';
+import { Input, Modal, Spin } from 'antd';
+import resume from "../assets/PrabuRe.pdf"
 
 const Navbar = () => {
     const navigate = useNavigate();
@@ -54,6 +55,14 @@ const Navbar = () => {
             setIsLoading(false)
         }
     }
+    const handleDownload = () => {
+        const link= document.createElement("a");
+        link.href=resume;
+        link.download="PrabuRe.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.appendChild(link);
+    }
     return (<>
 
         <div className=' bg-black flex justify-between items-center h-24  mx-auto px-12 text-white'>
@@ -70,7 +79,9 @@ const Navbar = () => {
                     Portfolio
                 </h2>
             </div>
-
+            
+               <button className='text-white font-bold text-xl uppercase inline-block transform transition duration-300 ease-out hover:scale-125 hover:text-blue-600 ' onClick={handleDownload}>Download Resume </button>
+            
             <div >
                 <ul>
                     <li><Link to="/ContactUs">

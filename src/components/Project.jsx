@@ -9,19 +9,22 @@ const Project = () => {
         {
             _id: '1',
             images: project1,
-            authorName: 'John Doe',
+            authorName: 'Prabu P',
             heading: 'First Ladder',
             description: 'First-Ladder is an International Education, Immigration and Recruitment Consulting Company headquartered in Chennai, India. We are a leading global career consulting firm, providing innovative and customized solutions to students, job seekers and employers. Our process starts with developing an accurate profile of each candidate and using that as out database to match them with the available opportunities in terms of education and jobs. Our aim is to help students and professionals from all over the world to find opportunities that match their requirements, skillset, interests and aspirations, so that they can pursue their dreams while achieving higher returns on investment.'
-
+            ,
+            GitHub: 'https://github.com/Team-FSD0011/lader.git',
+            Netlify: 'https://firstladder.netlify.app'
         },
         {
             _id: '2',
             images: project2,
-            authorName: 'Jane Smith',
+            authorName: 'Prabu P',
             heading: 'PSP Hospital',
-            description: 'An inviting homepage with an overview of the hospital, its mission, and key services. Features can include quick navigation to services, testimonials, and a contact and appointments hotline.'
-            
-        },
+            description: 'An inviting homepage with an overview of the hospital, its mission, and key services. Features can include quick navigation to services, testimonials, and a contact and appointments hotline.',
+            GitHub: 'https://github.com/Prabu1504/deplay', 
+            Netlify: 'https://hospitalpsp.netlify.app' 
+        }
 
     ];
 
@@ -113,7 +116,7 @@ const Project = () => {
 
                                     <div className="mt-2">
                                         <p className="text-gray-600 text-2xl px-1">{selectedRecord.authorName}</p>
-                                        
+
                                     </div>
                                 </div>
                                 <div className="flex flex-row">
@@ -134,7 +137,13 @@ const Project = () => {
                                         />{selectedRecord.description}
                                     </div>
                                 </div>
+                                <div className=' ml-20 gap-44 px-5 flex'>
+                                   <a href={selectedRecord.GitHub}> <button className=' px-2 rounded py-1 bg-blue-600 text-white hover:bg-blue-400 font-bold text-2xl'>GitHub</button></a>
+                                  <a href={selectedRecord.Netlify}> <button className=' px-2 rounded py-1 bg-blue-600 text-white hover:bg-blue-400 text-2xl font-bold'>Netlify</button></a>
+                                </div>
+
                             </div>
+
                         </div>
                     )}
                 </Modal>
