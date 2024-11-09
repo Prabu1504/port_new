@@ -138,8 +138,8 @@ const Project = () => {
                                     </div>
                                 </div>
                                 <div className=' ml-20 gap-44 px-5 flex'>
-                                   <a href={selectedRecord.GitHub}> <button className=' px-2 rounded py-1 bg-blue-600 text-white hover:bg-blue-400 font-bold text-2xl'>GitHub</button></a>
-                                  <a href={selectedRecord.Netlify}> <button className=' px-2 rounded py-1 bg-blue-600 text-white hover:bg-blue-400 text-2xl font-bold'>Netlify</button></a>
+                                   <a href={selectedRecord.GitHub} target="_blank" rel="noopener noreferrer"> <button className=' px-2 rounded py-1 bg-blue-600 text-white hover:bg-blue-400 font-bold text-2xl'>GitHub</button></a>
+                                  <a href={selectedRecord.Netlify} target="_blank" rel="noopener noreferrer"> <button className=' px-2 rounded py-1 bg-blue-600 text-white hover:bg-blue-400 text-2xl font-bold'>Netlify</button></a>
                                 </div>
 
                             </div>

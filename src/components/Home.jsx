@@ -27,6 +27,7 @@ const skills = [
 ];
 const softSkills = ['Git', 'TeamWork', 'Quick Learning', 'VS Code'];
 const education = [
+    // { year: "2023", course: "PGFSD", institute: "WHY Global service", place: "Chennai" },
     { year: "2023", course: "PGFSD", institute: "WHY Global service", place: "Chennai" },
     { year: "2021", course: "BE Computer Science and Engineering", institute: "CSI Institute of Technology", place: "Thovalai" },
     { year: "2017", course: "HSC", institute: "Government Boys High secondary School", place: "Devapandalam" },
@@ -84,9 +85,9 @@ const Home = () => {
                     <div className='container px-12 py-10 flex gap-8'>
                         <div>
                             <h1 className='font-bold text-4xl'> Hello, I am PRABU</h1>
-                            <h1 className='font-bold text-4xl mt-1 gradiant-text'> MEAN stack developer</h1>
-                            <h1 className='mt-4 text-gray-300 font-semibold'>It is the core of both frontend and backend development using React and Node.js. Therefore, MERN stack developers must possess proficiency in ES6+ features, asynchronous programming, and functional programming concepts to effectively build websites. </h1>
-
+                            <h1 className='font-bold text-4xl mt-1 gradiant-text'> MERN Stack Developer</h1>
+                            <h1 className='mt-4 text-gray-300 font-semibold'>
+                            Motivated MERN Stack Developer with 1 year of practical experience in building responsive and efficient applications using React.js, Node.js, and MongoDB. Known for a proactive approach, problem-solving mindset, and adaptability to new technologies, I am eager to join a forward-thinking team to contribute fresh perspectives and technical expertise. Passionate about delivering seamless user experiences and collaborating to achieve innovative solutions that align with business goals.</h1>
                         </div>
                         <div className='relative'>
                             <img src={MyImage} width={180} height={150} alt="MyImage" className='rounded-tl-lg relative rounded-br-lg z-10 inline-block transform transition duration-300 ease-out hover:scale-150' />
@@ -136,7 +137,7 @@ const Home = () => {
                 {/* About page */}
                 <section className='mt-6'>
                     <div className='container'>
-                        <h1 className='text-3xl font-semibold pl-8 inline-block transform transition duration-300 ease-out hover:scale-125 hover:text-blue-600'>About Me</h1>
+                        <h1 className='text-3xl font-semibold pl-8 inline-block transform transition duration-300 ease-out hover:scale-125 hover:text-blue-600'>Education</h1>
                         <div className=' mt-8 ml-28 relative before:absolute before:top-0 before:bottom-0 before:w-2 before:bg-white'>
                             {education.map((educations, index) => (
                                 <div className='pl-6 relative mb-6'>
@@ -154,7 +155,7 @@ const Home = () => {
                 </section>
 
                 {/* footer part */}
-                <div className="bg-blue-500 py-10 mt-5 rounded-t-lg">
+                <div className="bg-blue-500 py-10 mt-16 rounded-t-lg">
                     <div className="container mx-auto px-4 lg:px-28">
                         <div className="ml-auto sm:ml-0 mb-6 flex justify-center sm:justify-start">
                             <img src={logo} alt="Logo" className="w-15 h-10" />
@@ -182,15 +183,15 @@ const Home = () => {
                                 <ul className="space-y-4 text-lg">
                                     <li className="text-xl font-semibold">Social Links</li>
                                     <li className="flex justify-center lg:justify-start space-x-5">
-                                        <TfiTwitter size="30px" />
-                                        <CiFacebook size="30px" />
-                                        <a href="https://www.instagram.com/_silent_at_na_k_ri_ku_s_?igsh=dDNyaDF6NjlkZTh2">
+                                        {/* <TfiTwitter size="30px" /> */}
+                                        {/* <CiFacebook size="30px" /> */}
+                                        {/* <a href="https://www.instagram.com/_silent_at_na_k_ri_ku_s_?igsh=dDNyaDF6NjlkZTh2">
                                             <PiInstagramLogoLight size="30px" className='hover:text-red-400' />
-                                        </a>
-                                        <a href="https://www.linkedin.com/in/prabu-p-2a6440301/">
+                                        </a> */}
+                                        <a href="https://www.linkedin.com/in/prabu-p-2a6440301/" target="_blank" rel="noopener noreferrer">
                                             <TiSocialLinkedinCircular size="30px" className='hover:text-blue-600' />
                                         </a>
-                                        <a href="https://wa.me/1234567890?text=Hello%20there!" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://wa.me/7397027766?text=Hello%20there!" target="_blank" rel="noopener noreferrer">
                                             <FaWhatsapp size="30px" className='hover:text-green-700' />
                                         </a>
                                     </li>

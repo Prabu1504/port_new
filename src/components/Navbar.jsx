@@ -96,7 +96,7 @@ const Navbar = () => {
                         <div className='user-form'>
                             <div className='heading'>
                                 {isLoading && <Spin />}{error && <p>Error:{error}</p>}
-                                <h2 className='text-xl font-semibold justify-center flex text-blue-600 items-center underline underline-offset-4'>Context Me</h2>
+                                <h2 className='text-xl font-semibold justify-center flex text-blue-600 items-center underline underline-offset-4'>Contact Me</h2>
 
                             </div>
                         </div>
