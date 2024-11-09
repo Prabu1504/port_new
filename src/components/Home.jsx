@@ -98,7 +98,7 @@ const Home = () => {
                     </div>
                 </section>
 
-                {/* About page */}
+                {/* Education page */}
                 <section className='mt-6'>
                     <div className='container'>
                         <h1 className='text-3xl font-semibold pl-8 inline-block transform transition duration-300 ease-out hover:scale-125 hover:text-blue-600'>Education</h1>
