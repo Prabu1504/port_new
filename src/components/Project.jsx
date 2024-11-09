@@ -84,8 +84,9 @@ const Project = () => {
                                             onClick={() => setIsExpanded(!isExpanded)}
                                         >
                                             {project.description}
-                                        </p>                                        <button
-                                            className="bg-white font-bold hover:bg-green-500 hover:text-white text-black py-2  px-4 rounded-md mt-20 ml-3"
+                                        </p>                                      
+                                          <button
+                                            className="bg-white flex justify-center items-center mb-5 font-bold hover:bg-green-500 hover:text-white text-black py-2  px-4 rounded-md mt-20 ml-3"
                                             onClick={() => handleView(project)}
                                         >
                                             Read More
