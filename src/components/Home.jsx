@@ -1,20 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import MyImage from '../assets/600.jpg';
 import bgImage from '../assets/backgroundImg.png';
-// import Instagram from '../assets/logo2.jpg'
-// import Facebook from '../assets/logo3.jpg'
-// import Linkedin from '../assets/logo4.jpg'
-import { TfiTwitter } from "react-icons/tfi";
-import { CiFacebook } from "react-icons/ci";
-import { PiInstagramLogoLight } from "react-icons/pi";
 import { TiSocialLinkedinCircular } from "react-icons/ti";
-// import play from "/src/assets/immaigration1.jpg"
-// import google from "/src/assets/immaigration1.jpg"
 import { FaWhatsapp } from "react-icons/fa6";
 import logo from "/src/assets/logo.png"
-import mySelf from "/src/assets/imges.png";
-import { Link } from 'react-router-dom';
-import Project from"./Project"
+import Project from "./Project"
 
 const skills = [
     { name: 'HTML', level: 'Advanced', width: 'w-[96%]' },
@@ -34,49 +24,10 @@ const education = [
     { year: "2015", course: "SSLC", institute: " Government Boys High secondary School", place: "Devapandalam" },
 
 ]
-//     {
-//         _id: '1',
-//         images: '/src/assets/logo.png',
-//         authorName: 'John Doe',
-//         updatedAt: '2024-01-15T14:32:00',
-//         heading: 'First Project',
-//     },
-//     {
-//         _id: '2',
-//         images: '/src/assets/logo.png',
-//         authorName: 'Jane Smith',
-//         updatedAt: '2024-02-20T09:15:00',
-//         heading: 'Second Project',
-//     },
-//     {
-//         _id: '3',
-//         images: '/src/assets/logo.png',
-//         authorName: 'Alex Johnson',
-//         updatedAt: '2024-03-10T12:45:00',
-//         heading: 'Third Project',
-//     },
-//     {
-//         _id: '3',
-//         images: '/src/assets/logo.png',
-//         authorName: 'Alex Johnson',
-//         updatedAt: '2024-03-10T12:45:00',
-//         heading: 'Forth Project',
-//     },
-// ];
 
-// const blog = {
-//     heading: 'Sample Project',
-//     authorName: 'John Doe',
-//     createdAt: '2024-03-10T12:45:00',
-//     images: 'https://via.placeholder.com/600x400',
-//     description: `
-//       <p>This is a sample project description.</p>
-//       <p>It explains the details of the project, the objectives, and the outcomes.</p>
-//     `
-// };
 
 const Home = () => {
-    
+
     return (
         <>
             <div className='px-6'>
@@ -85,18 +36,31 @@ const Home = () => {
                     <div className='container px-12 py-10 flex gap-8'>
                         <div>
                             <h1 className='font-bold text-4xl'> Hello, I am PRABU</h1>
-                            <h1 className='font-bold text-4xl mt-1 gradiant-text'> MERN Stack Developer</h1>
+                           {Array.from({length:1}).map((_,index)=>(
+                             <h1 className="font-bold text-4xl mt-1 ">
+                             {"MERN Stack Developer".split("").map((letter, index) => (
+                                 <span
+                                     key={index}
+                                     className={`inline-block opacity-0 animate-fadeIn gradient-text ${letter?"mr-2":""}`}
+                                     style={{ animationDelay: `${index * 0.1}s`,justifyContent: 'space-between' }} 
+                                 >
+                                     {letter}
+                                 </span>
+                             ))}
+                         </h1>
+                           ))}
+
                             <h1 className='mt-4 text-gray-300 font-semibold'>
-                            Motivated MERN Stack Developer with 1 year of practical experience in building responsive and efficient applications using React.js, Node.js, and MongoDB. Known for a proactive approach, problem-solving mindset, and adaptability to new technologies, I am eager to join a forward-thinking team to contribute fresh perspectives and technical expertise. Passionate about delivering seamless user experiences and collaborating to achieve innovative solutions that align with business goals.</h1>
+                                Motivated MERN Stack Developer with 1 year of practical experience in building responsive and efficient applications using React.js, Node.js, and MongoDB. Known for a proactive approach, problem-solving mindset, and adaptability to new technologies, I am eager to join a forward-thinking team to contribute fresh perspectives and technical expertise. Passionate about delivering seamless user experiences and collaborating to achieve innovative solutions that align with business goals.</h1>
                         </div>
                         <div className='relative'>
-                            <img src={MyImage} width={180} height={150} alt="MyImage" className='rounded-tl-lg relative rounded-br-lg z-10 inline-block transform transition duration-300 ease-out hover:scale-150' />
+                            <img src={MyImage} height={150} alt="MyImage" className='rounded-tl-lg  lg:w-72 relative rounded-br-lg z-10 inline-block transform transition duration-300 ease-out hover:scale-150' />
                             <img src={bgImage} alt="bg" width={370} height={850} className='absolute rounded-br-lg top-2 left-2 z-2' />
                         </div>
                     </div>
                 </section>
                 {/* Project Details */}
-                <Project/>
+                <Project />
                 {/* Technology section */}
                 <section>
                     <div className='container'>
