@@ -53,8 +53,8 @@ const Home = () => {
                             <h1 className='mt-4 text-gray-300 font-semibold'>
                                 Motivated MERN Stack Developer with 1 year of practical experience in building responsive and efficient applications using React.js, Node.js, and MongoDB. Known for a proactive approach, problem-solving mindset, and adaptability to new technologies, I am eager to join a forward-thinking team to contribute fresh perspectives and technical expertise. Passionate about delivering seamless user experiences and collaborating to achieve innovative solutions that align with business goals.</h1>
                         </div>
-                        <div className='relative'>
-                            <img src={MyImage} height={150} alt="MyImage" className='rounded-tl-lg  lg:w-72 relative rounded-br-lg z-10 inline-block transform transition duration-300 ease-out hover:scale-150' />
+                        <div className='relative hidden lg:block md:block xl:block'>
+                            <img src={MyImage} height={150} alt="MyImage" className='rounded-tl-lg md:w-64  lg:w-72 relative rounded-br-lg z-10 inline-block transform transition duration-300 ease-out hover:scale-150' />
                             <img src={bgImage} alt="bg" width={370} height={850} className='absolute rounded-br-lg top-2 left-2 z-2' />
                         </div>
                     </div>
