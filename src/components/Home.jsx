@@ -146,17 +146,17 @@ const Home = () => {
                             <div className="sm:ml-12 lg:ml-0">
                                 <ul className="space-y-4 text-lg">
                                     <li className="text-xl font-semibold">Social Links</li>
-                                    <li className="flex justify-center lg:justify-start space-x-5">
+                                    <li className="flex justify-center lg:justify-start space-x-5 transform transition ease-out duration-150">
                                         {/* <TfiTwitter size="30px" /> */}
                                         {/* <CiFacebook size="30px" /> */}
                                         {/* <a href="https://www.instagram.com/_silent_at_na_k_ri_ku_s_?igsh=dDNyaDF6NjlkZTh2">
                                             <PiInstagramLogoLight size="30px" className='hover:text-red-400' />
                                         </a> */}
                                         <a href="https://www.linkedin.com/in/prabu-p-2a6440301/" target="_blank" rel="noopener noreferrer">
-                                            <TiSocialLinkedinCircular size="30px" className='hover:text-blue-600' />
+                                            <TiSocialLinkedinCircular size="37px" className='hover:text-blue-600 transform transition ease-out duration-150 hover:scale-125' />
                                         </a>
                                         <a href="https://wa.me/7397027766?text=Hello%20there!" target="_blank" rel="noopener noreferrer">
-                                            <FaWhatsapp size="30px" className='hover:text-green-700' />
+                                            <FaWhatsapp size="30px" className='hover:text-green-700 lg:mt-0.5 transform transition duration-300 ease-out hover:scale-125' />
                                         </a>
                                     </li>
                                 </ul>
